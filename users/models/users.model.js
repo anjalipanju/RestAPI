@@ -18,3 +18,8 @@ exports.findById = (id) => {
         return result;
     });
 };
+exports.patchUser = (id, userData) => {
+    return User.findOneAndUpdate({
+        _id: id
+    }, userData);
+};
