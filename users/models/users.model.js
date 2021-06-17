@@ -6,3 +6,7 @@ const userSchema = new Schema({
    permissionLevel: Number
 });
 const userModel = mongoose.model('Users', userSchema);
+exports.createUser = (userData) => {
+    const user = new User(userData);
+    return user.save();
+};
